@@ -1,17 +1,14 @@
-{% import "macros.html" as macros %}
+<!-- {% import "macros.html" as macros %} -->
+{% from 'macros.html' import listar_itens %} 
 {% extends 'base.html' %}
 
 
 
-
-
 {% block titulo %}
-  Home
+  {{ super() }} - Home
 {% endblock %}
-
 
 {% block body %}
     <h1>HomePage</h1>
-    <h1>Itens:</h1>
-    {{ macros.listar_itens(lista) }}
+    {{ listar_itens(lista) }}
 {% endblock %}
